@@ -134,6 +134,9 @@ img {
 
 /* Mobile Responsive */
 @media screen and (max-width: 576px) {
+  .nav-items {
+    flex-direction: column;
+  }
   .banner-title {
     font-size: 2rem;
   }
