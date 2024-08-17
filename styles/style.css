@@ -1,13 +1,143 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* CSS Variables  */
+:root {
+  --text-gray: #424242;
+  --text-light-gray: #727272;
+  --text-dark: #131313;
+  --bg-primary: rgb(255, 144, 14);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
 }
 .work-sans-font {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+/* Global Styles  */
+img {
+  width: 100%;
+}
+.btn {
+  padding: 20px 24px;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: var(--bg-primary);
+}
+.btn-secondary {
+  background-color: var(--text-dark);
+}
+
+/* Shared Styles  / Custom Classes*/
+.display-flex {
+  display: flex;
+}
+.text-gray {
+  /* dark 02  */
+  color: #424242;
+}
+.text-light-gray {
+  /* dark 03  */
+  color: #727272;
+}
+.bg-light {
+  background-color: rgba(255, 144, 14, 0.1);
+}
+
+/* Navbar  */
+
+.navbar,
+.banner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.brand {
+  font-weight: 800;
+  font-size: 3rem;
+  color: var(--text-dark);
+}
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.nav-item {
+  padding: 10px;
+  margin-right: 30px;
+}
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+/* banner  */
+.banner {
+  padding: 50px 0;
+}
+.banner-content {
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.banner-description {
+  font-size: 16px;
+  color: var(--text-light-gray);
+}
+.banner-title {
+  color: var(--text-dark);
+  font-size: 4rem;
+  font-weight: 700;
+}
+.banner-image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Tablet Responsive*/
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .banner-title {
+    font-size: 3rem;
+  }
+  .banner-image {
+    width: 90%;
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 576px) {
+  .banner-title {
+    font-size: 2rem;
+  }
+  .banner-description {
+    font-size: 12px;
+  }
 }
